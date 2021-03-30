@@ -15,11 +15,11 @@
 .navbar-brand,.nav-link{
     color:white!important;
 }
-#caro{
+#caro,#caro2{
     font-family: Acme;
-    background-color: #85a960;
+    background-color: #65a467;
 }
-#caro h1{
+#caro h1,#caro2 h1{
     font-weight: bolder;
 }
 ::selection{
@@ -87,21 +87,45 @@ p{
     width: 200px;
 }
 .containers{
-    margin-left: 130px;
-    margin-right: 130px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 .containers h1{
-    margin:0 0 60px 18px;
+    margin:0 0 60px 0px;
 }
+#carousel-slick,#carousel-slick2{
+    width: 1300px;
+}
+
 .carousel-main{
-    height: 100vh;
+    height: 800px;
+}
+.slick-list{
+    height: 500px;
+}
+.slick-prev {
+    left: -50px!important;
+    z-index: 100000!important;
+}
+.slick-next{
+    right:-37px!important;
+    z-index: 100000!important;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 50px!important;
+}
+.slick-slide{
+    width: 300px!important;
+    margin: 0 30px 30px 0!important;
+}
+.slick-track{
+    height: 200px;
 }
 .items{
-    width: 300px;
+    width: 300px!important;
     height: 300px;
-    margin: 0 20px;
+    margin: 0 30px 30px 0;
     overflow: hidden;
-    margin-bottom: 20px;
     
 }
 .items img{
@@ -122,8 +146,13 @@ p{
     color:black
 }
 .order button{
+    transition: 0.5s;
     width: 300px;
     font-size: 18px;
+}
+.order button:hover{
+    transition: 0.5s;
+    width: 200px;
 }
 .subs{
     height: 70vh;

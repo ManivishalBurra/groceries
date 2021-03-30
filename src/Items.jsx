@@ -6,11 +6,11 @@ function Items(props){
             <div class="items center">
                 <img src={props.image} />
             </div>
-            <div className="order">
-            <button>Add to cart</button>
+            <div className="order center">
+            <button>{props.order}</button>
             </div>
-            <div className="order Buy">
-            <button>Buy Now</button>
+            <div className="order Buy center">
+            <button>{props.buy}</button>
             </div>
             </div>
             );

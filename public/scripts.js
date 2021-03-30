@@ -1,9 +1,13 @@
-$(document).ready(function(){
-    $('.your-class').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true
-    });
+$(function(){
+  $('.multiple-items').slick({
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 4,
+    adaptiveHeight: true,
+    arrows: true,
+    centerMode:true,
+    centerPadding:'0',
+    dots: false,
   });
+})
