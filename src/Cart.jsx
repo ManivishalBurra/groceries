@@ -12,6 +12,9 @@ function Cart(){
             </div>
             <hr/>
         </header>
+        <CartQueue /> 
+        <CartQueue /> 
+        <CartQueue /> 
         <CartQueue />   
 
         </div>
