@@ -25,7 +25,7 @@ function Total(props){
               <div>
                   
                   <button onClick={Close} style={{color:"black",backgroundColor:"white"}}> Cancel </button>&nbsp;&nbsp;
-                  <button> Pay now </button>
+                  <a href="/pay"><button> Pay now </button></a>
               </div>
             </div>
         

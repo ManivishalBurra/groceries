@@ -37,9 +37,9 @@ function App(){
         <Subscribe /> 
         <Carousel2 addToCart={addCart} data={data}/>
         <Cart classname="cart backdrop-blur-white" data={data} deletion={deletion} />
-        <Cart classname="center bill-main backdrop-blur" subclass="billbox" data={data} deletion={deletion} />
         <Buttons classname="popup" buy="added to cart"/>
-        <Footer bottom="Made with ❤️ by burra"/>
+        <Cart classname="center bill-main backdrop-blur" subclass="billbox" data={data} deletion={deletion} />
+        
         </div>
     );
 }

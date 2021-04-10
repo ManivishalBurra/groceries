@@ -1,59 +1,49 @@
 const shopList=[
     {
         id:1,
-        image:"images/strawberry.jpeg",
-        order:"Strawberry",
+        image:"images/pineapple.jpeg",
+        order:"Pineapple",
         buy:"Add to cart",
-        access:"1"
-    },
-    {
+        access:"1",
+        price:100,
+        quantity:"1pc"
+      },
+      {
         id:2,
-        image:"images/banana.jpeg",
-        order:"Banana",
+        image:"https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/chicken-eggs-in-eggbox-gerard-lacz.jpg",
+        order:"Eggs",
         buy:"Add to cart",
-        access:"1"
-    },
-    {
-        id:3,
-        image:"images/kiwi.jpeg",
-        order:"Kiwi",
+        access:"1",
+        price:60,
+        quantity:"12pc"
+      },
+      {
+        id:2,
+        image:"https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/chicken-eggs-in-eggbox-gerard-lacz.jpg",
+        order:"Eggs",
         buy:"Add to cart",
-        access:"1"
-    },
-    {
-        id:4,
-        image:"images/watermelon.jpeg",
-        order:"Watermelon",
+        access:"1",
+        price:60,
+        quantity:"12pc"
+      },
+      {
+        id:2,
+        image:"https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/chicken-eggs-in-eggbox-gerard-lacz.jpg",
+        order:"Eggs",
         buy:"Add to cart",
-        access:"1"
-    },
-    {
-        id:5,
-        image:"images/strawberry.jpeg",
-        order:"Strawberry",
+        access:"1",
+        price:60,
+        quantity:"12pc"
+      },
+      {
+        id:2,
+        image:"https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/chicken-eggs-in-eggbox-gerard-lacz.jpg",
+        order:"Eggs",
         buy:"Add to cart",
-        access:"1"
-    },
-    {
-        id:6,
-        image:"images/banana.jpeg",
-        order:"Banana",
-        buy:"Add to cart",
-        access:"1"
-    },
-    {
-        id:7,
-        image:"images/kiwi.jpeg",
-        order:"Kiwi",
-        buy:"Add to cart",
-        access:"1"
-    },
-    {
-        id:8,
-        image:"images/watermelon.jpeg",
-        order:"Watermelon",
-        buy:"Add to cart",
-        access:"1"
-    }
+        access:"1",
+        price:60,
+        quantity:"12pc"
+      },
+      
 ];
 export default shopList;

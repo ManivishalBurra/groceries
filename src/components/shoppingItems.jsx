@@ -1,6 +1,7 @@
 import React from 'react';
 import Buttons from './Buttons'
 function Shoppingitems(props){
+    
     function click(){
         var x=document.querySelectorAll(".bill-main");
         x[0].style.display="flex";
@@ -15,7 +16,7 @@ function Shoppingitems(props){
       props.addtocart(props);
     }
     return (
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-6 col-md-6">
             <div className="center column item-card" id={props.classes} >
             <div class="items center">
                 <img src={props.image} />
@@ -27,7 +28,7 @@ function Shoppingitems(props){
             <a href={props.pathref}><button name={props.image} value={props.order} onClick={addCart }>{props.buy}</button></a>
             </div>
             <div className="Buy order center Coi buynow">
-            <a href={props.pathref}><button name={props.image} value={props.order} onClick={click} >"Buy now"</button></a>
+            <a href={props.pathref}><button name={props.image} value={props.order} onClick={click} >Buy now</button></a>
             </div>
             </div>
             </div>

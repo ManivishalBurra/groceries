@@ -3,11 +3,12 @@ import Navbar from './Navbar';
 import Shopping from './shopping';
 import Buttons from './Buttons';
 import shopList from '../shoppinglist';
+import {cartList} from '../cartlist'
 import Cart from './Cart';
 import Footer from 'rc-footer';
 import 'rc-footer/assets/index.css'; // import 'rc-footer/asssets/index.less';
 function Mart(){
-    const [data,setData]=React.useState(shopList);
+    const [data,setData]=React.useState(cartList);
     function deletion(id){
         setData(data.filter(function( obj ) {
             return obj.id !== id;
@@ -29,11 +30,10 @@ function Mart(){
         <div>
         <Navbar />
         <div className="shopping-page">
-        <Shopping />
+        <Shopping addToCart={addCart} data={data}/>
         <Cart classname="cart backdrop-blur-white" data={data} deletion={deletion} />
         <Cart classname="center bill-main backdrop-blur" subclass="billbox" data={data} deletion={deletion} />
         <Buttons classname="popup" buy="added to cart"/>
-        <Footer bottom="Made with ❤️ by burra"/>
         </div>
         </div>
     );

@@ -6,6 +6,7 @@ function Cart(props){
 
     function cartLists(cart){
         return <CartQueue
+        key={cart.id}
         img={cart.img}
         price={cart.price}
         itemname={cart.itemname}

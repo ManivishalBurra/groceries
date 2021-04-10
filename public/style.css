@@ -300,14 +300,18 @@ p{
 #contain{
     margin:100px;
 }
+#contain-shop{
+    width: 100%;
+}
 #contain-shop .col-lg-3 .item-card{
  margin:50px 0;
 }
 .popup{
-    position: absolute;
+    position: fixed;
     z-index: 1;
     border-radius: 8px;
     left: 45%;
+    bottom: 100px;
 }
 .popup a button{
 
@@ -338,6 +342,13 @@ p{
     height: 100vh;
     width: 100%;
     display: none;
+}
+.payment{
+    height: 100vh;
+}
+.payment img{
+    width: 150px;
+    height: auto;
 }
 ::-webkit-scrollbar {
     width: 1.5px;
