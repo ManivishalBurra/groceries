@@ -1,0 +1,86 @@
+const lists=[
+    {
+      id:1,
+      image:"images/pineapple.jpeg",
+      order:"Fruits",
+      buy:"Visit now",
+      access:"0",
+      price:100,
+    },
+    {
+        id:2,
+        image:"images/potato.jpeg",
+        order:"Vegetables",
+        buy:"Visit now",
+        access:"0",
+        price:150,
+    },
+    {
+        id:3,
+        image:"https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2017/06/05/Photos/Processed/dairy-kqCH--621x414@LiveMint.jpg",
+        order:"Dairy",
+        buy:"Visit now",
+        access:"0",
+        price:99,
+    },
+    {
+        id:4,
+        image:"https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/pepsico_660_102918073810_032519052623.jpg",
+        order:"Beverages",
+        buy:"Visit now",
+        access:"0",
+        price:149,
+    },
+    {
+        id:5,
+        image:"https://foodresearchlab.com/wp-content/uploads/2020/06/ff4.jpg",
+        order:"Bakery",
+        buy:"Visit now",
+        access:"0",
+        price:15,
+    },
+    {
+        id:6,
+        image:"https://mk0fabrikbrandsfni4m.kinstacdn.com/wp-content/uploads/Brand-Extension-5.jpg",
+        order:"Daily needs",
+        buy:"Visit now",
+        access:"0",
+        price:133,
+    },
+
+];
+const buyList=[
+    {
+        id:1,
+        image:"images/strawberry.jpeg",
+        order:"Strawberry",
+        buy:"Add to cart",
+        access:"1",
+        price:100,
+    },
+    {
+        id:2,
+        image:"images/banana.jpeg",
+        order:"Banana",
+        buy:"Add to cart",
+        access:"1",
+        price:99,
+    }, 
+    {
+        id:3,
+        image:"images/kiwi.jpeg",
+        order:"Kiwi",
+        buy:"Add to cart",
+        access:"1",
+        price:120,
+    },
+    {
+        id:4,
+        image:"images/watermelon.jpeg",
+        order:"Watermelon",
+        buy:"Add to cart",
+        access:"1",
+        price:80,
+    },
+]
+export {lists,buyList};

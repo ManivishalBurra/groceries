@@ -1,20 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Navbar from './Navbar';
-import Landing from './Landing';
-import Carousel from './Carousel';
-import Subscribe from './Subscribe';
-import Carousel2 from './Carousel2';
-import Cart from './Cart';
-ReactDOM.render(
+import App from './components/App';
+import Mart from './components/Mart';
+import {Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';
+const routing = (
+  <Router>
     <div>
-    <Navbar />
-    <Landing />
-    <Carousel />
-    <Subscribe /> 
-    <Carousel2 />
-    <Cart />
+      
+      <Route exact path="/" component={App} />
+      <Route path="/mart" component={Mart} />
+      
     </div>
-  ,document.getElementById('root')
-);
+  </Router>
+)
+
+ReactDOM.render(routing,document.getElementById('root'));
 

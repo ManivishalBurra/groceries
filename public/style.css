@@ -113,15 +113,12 @@ p{
     margin:0 0 60px 0px;
 }
 #carousel-slick,#carousel-slick2{
-    width: 1300px;
+    width: 80vw;
 }
 .carousel-main{
     height: 800px;
 }
-#carousel-slick .slick-list{
-    height: 385px;
-}
-#carousel-slick2 .slick-list{
+#carousel-slick .slick-list, #carousel-slick2 .slick-list{
     height: 385px;
 }
 .slick-prev {
@@ -140,14 +137,19 @@ p{
     margin: 0 30px 30px 0!important;
 }
 .slick-track{
-    height: 200px;
+    height: 400px;
 }
 .items{
     width: 300px!important;
     height: 300px;
-    margin: 0 30px 30px 0;
+    margin: 0 0px 30px 0;
     overflow: hidden;
     box-shadow: -1px 3px 12px 1px rgba(0,0,0,0.75);
+    background-color: #000;
+    position: relative;
+}
+.item-card{
+    margin-right: 30px;
 }
 .items img{
     transition: 0.5s;
@@ -164,7 +166,7 @@ p{
 }
 .order-abs{
     position: absolute;
-    bottom:-50%;
+    bottom:0%;
 }
 .stat-order button{
     background-color: rgba(0, 0, 0, 0.7);
@@ -181,6 +183,9 @@ p{
 .Boi{
     width: 300px;
     overflow: hidden;
+}
+.Coi a button{
+    width: 150px;
 }
 .Coi{
     transition: 0.5s;
@@ -224,6 +229,7 @@ p{
     z-index: 10001 ;
     display: block;
     width: 440px;
+    height: 50px;
     border: 1px solid #e9e9e9;
     border-radius: 8px 0 0 8px;
     box-shadow: 0 0 12px 4px rgb(0 0 0 / 5%);
@@ -233,9 +239,9 @@ p{
 }
 .cart:hover{
     transition: 1s;
+    height: 300px;
     -ms-transform: translate(0px,0px); /* IE 9 */
     transform: translate(0px,0px); /* Standard syntax */
-    bottom:119.5px;
     
 }
 .cart-header{
@@ -286,10 +292,56 @@ p{
     width: auto;
     height: 100%;
 }
+/* shopping */
+.shopping-main{
+    margin: 100px 0;
+
+}
+#contain{
+    margin:100px;
+}
+#contain-shop .col-lg-3 .item-card{
+ margin:50px 0;
+}
+.popup{
+    position: absolute;
+    z-index: 1;
+    border-radius: 8px;
+    left: 45%;
+}
+.popup a button{
+
+    transition: 0.5s;
+    background-color: rgb(240, 255, 108);
+    border-radius: 5px;
+    border: none;
+    visibility: hidden;
+}
+
+.shopping-page{
+    padding: 50px 0;
+    background-color: rgb(101, 164, 103);
+}
+#shopping-thumbnail{
+    position: relative;
+}
+.billbox{
+    width: 50%;
+    position: absolute;
+    background-color: #DADADA;
+    border-radius: 8px;
+}
+.bill-main{
+    position: fixed;
+    z-index: 10002;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
 ::-webkit-scrollbar {
     width: 1.5px;
-    background-color: black
-  
+    background-color: black;
   }
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, .3);
@@ -299,5 +351,4 @@ p{
     border-radius: 10px;
     -webkit-box-shadow: outset 0 0 6px 20px rgba(0, 0, 0, .3);
     background:rgb(101, 164, 103);
-  
   }
