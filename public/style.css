@@ -363,3 +363,46 @@ p{
     -webkit-box-shadow: outset 0 0 6px 20px rgba(0, 0, 0, .3);
     background:rgb(101, 164, 103);
   }
+@media screen and (max-width:672px) {
+
+    .slick-prev:before, .slick-next:before {
+        font-size: 20px!important;
+    }
+    .landing-page h1 {
+        font-size: 40px;
+    }
+    .greeting {
+        width: 85%;
+    }
+    p {
+        font-size: 17px;
+    }
+    .c-search input {
+        width: 80vw;
+    }
+    .order button{
+        width: 250px;
+    }
+    .greeting .order button{
+        width: 40vw;
+    }
+    .slick-slide {
+        width: 250px!important;
+    }
+    .items {
+        width: 250px!important;
+        height: 250px;
+    }
+    .Boi {
+        width: 250px;
+    }
+    .Coi a button {
+        width: 120px;
+    }
+    .slick-next{
+        right: -25px!important;
+    }
+    .slick-prev {
+        left: -25px!important;
+    }
+}

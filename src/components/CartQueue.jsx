@@ -9,12 +9,12 @@ function CartQueue(props){
     return (
        <div className={"queue"+props.id+" center queue-list"}>
         <div className="queue-item center">
-        <i class="fas fa-braille"></i>
+        <i className="fas fa-braille"></i>
         </div>
 
         <div className="queue-item center">
             <div className="queue-img">
-                <img src={props.img}></img>
+                <img src={props.img} alt="cartimage"></img>
             </div>
             <div className="center column">
                 <p>{props.itemname}</p>

@@ -20,8 +20,8 @@ function Items(props){
     return (
 
             <div className="center column item-card" id={props.classes} >
-            <div class="items center">
-                <img src={props.image} />
+            <div className="items center">
+                <img src={props.image} alt="items.jpg"/>
                 <Buttons classname="order order-abs center stat-order shopbutton" buy={props.order} pathref="/mart"/> 
             </div>
             

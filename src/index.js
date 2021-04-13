@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import Mart from './components/Mart';
-import Pay from './components/Payment'
-import {Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';
+import Pay from './components/Payment';
+import {Route, BrowserRouter as Router} from 'react-router-dom';
 const routing = (
   <Router>
     <div>

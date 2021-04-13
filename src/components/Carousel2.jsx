@@ -18,10 +18,10 @@ function carousel2(props){
     }
     
     return (
-    <div class="carousel-main center" id="caro"> 
-        <div class="containers center column">
+    <div className="carousel-main center" id="caro"> 
+        <div className="containers center column">
         <h1>Our top picks for you</h1>
-            <div class="carousel center multiple-items" id="carousel-slick2">
+            <div className="carousel center multiple-items" id="carousel-slick2">
             {buyList.map(createItems)}
             </div>
         </div>

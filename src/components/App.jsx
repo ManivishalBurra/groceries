@@ -7,7 +7,6 @@ import Carousel2 from './Carousel2';
 import Buttons from './Buttons';
 import {cartList} from '../cartlist'
 import Cart from './Cart';
-import Footer from 'rc-footer';
 import 'rc-footer/assets/index.css'; // import 'rc-footer/asssets/index.less';
 
 function App(){

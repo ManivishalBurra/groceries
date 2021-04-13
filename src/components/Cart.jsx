@@ -20,7 +20,7 @@ function Cart(props){
      <div className={props.classname}>
         <header>
             <div className="cart-header center">
-              <strong><i class="fas fa-shopping-cart"></i>Cart</strong>
+              <strong><i className="fas fa-shopping-cart"></i>Cart</strong>
               <div>
                   <button> Checkout </button>
               </div>

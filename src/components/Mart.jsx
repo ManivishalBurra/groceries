@@ -2,10 +2,8 @@ import React from 'react';
 import Navbar from './Navbar';
 import Shopping from './shopping';
 import Buttons from './Buttons';
-import shopList from '../shoppinglist';
 import {cartList} from '../cartlist'
 import Cart from './Cart';
-import Footer from 'rc-footer';
 import 'rc-footer/assets/index.css'; // import 'rc-footer/asssets/index.less';
 function Mart(){
     const [data,setData]=React.useState(cartList);

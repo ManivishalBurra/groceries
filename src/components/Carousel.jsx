@@ -14,10 +14,10 @@ function createItems(list){
 }
 function carousel(props){
     return (
-    <div class="carousel-main center" id="caro"> 
-        <div class="containers center column">
+    <div className="carousel-main center" id="caro"> 
+        <div className="containers center column">
         <h1>Shop by category</h1>
-            <div class="carousel center multiple-items" id="carousel-slick">
+            <div className="carousel center multiple-items" id="carousel-slick">
                 {lists.map(createItems)}
             </div>
         </div>

@@ -1,8 +1,15 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import ShoppingItems from './shoppingItems';
-import shopList from '../shoppinglist';
+// import shopList from '../shoppinglist';
+import axios from 'axios';
+function Shopping(props){
 
-function shopping(props){
+    const [shopList,setshopList]=useState([]);
+    useEffect(()=>{
+        axios.get('/cartData').then((res)=>{
+            setshopList(res.data);
+        });
+    })
 
     function shoplists(list){
         return <ShoppingItems
@@ -30,4 +37,4 @@ function shopping(props){
     );
 }
 
-export default shopping;
+export default Shopping;
