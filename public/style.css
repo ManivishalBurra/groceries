@@ -5,6 +5,9 @@
     font-family: Acme;
 }
 body{
+    background-color: #f2f2f2;
+}
+body{
     overflow-x: hidden;
 }
 hr{
@@ -349,6 +352,82 @@ p{
 .payment img{
     width: 150px;
     height: auto;
+}
+.register-main{
+    height: 100vh;
+    background-color: #323232;
+}
+.registerLogin{
+    height: 500px;
+    width: 30%;
+    background-color: #1e7e34;
+    border-radius: 8px;
+    box-shadow: -1px 3px 30px -6px rgb(0 0 0 / 75%);
+}
+.registerLogin button,.registerLogin input{
+    width: 250px;
+    height: 50px;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 1);
+    border: 1px solid #DADADA;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 24%) 0px 2px 2px 0px, rgb(0 0 0 / 24%) 0px 0px 1px 0px;
+    font-size: 14.5px;
+}
+.registerLogin .center{
+    width: 100%;
+}
+.registerLogin hr{
+    width: 80%;
+    margin-top: 30px!important;
+    background-color: white;
+}
+.registerLogin button:hover{
+    background-color:rgb(101, 164, 103);
+}
+.register-options{
+    margin-top: 30px;
+}
+.log p,.username{
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.loginButton{
+    background-color: black!important;
+    border:none!important;
+    color: white!important;
+}
+
+.account-main{
+    padding-top: 100px;
+}
+.account-main p{
+    color: black;
+}
+.account-image img{
+    float: right;
+    border-radius: 100%;
+    height: 60px;
+}
+.filter{
+    transition: 0.6s;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: black;
+    border: none;
+    position: fixed;
+    bottom:37px;
+    right: 30px;
+}
+.filter:hover{
+    transition: 0.6s;
+    width: 70px;
+    height: 70px;
+}
+.filter i{
+    color: white;
 }
 ::-webkit-scrollbar {
     width: 1.5px;
