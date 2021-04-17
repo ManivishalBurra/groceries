@@ -5,11 +5,11 @@ import React from 'react';
 function Navbar(){
   const [loginStatus,setLoginStatus]=React.useState(false);
   const [credentials,setCredentials]=React.useState("");
-  axios.get("/loginStatus").then((res)=>{
+  axios.get("https://pacific-coast-95024.herokuapp.com/loginStatus").then((res)=>{
     setLoginStatus(res.data);
   });
   
-  axios.get("/accountCreds").then((res)=>{
+  axios.get("https://pacific-coast-95024.herokuapp.com/accountCreds").then((res)=>{
     setCredentials(res.data);
   })
     return(

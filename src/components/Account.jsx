@@ -6,16 +6,18 @@ import Navbar from './Navbar';
 function Account(){
     const [credentials,setCredentials]=React.useState("");
     const history = useHistory();
-    axios.get("/loginStatus").then((res)=>{
+    axios.get("https://pacific-coast-95024.herokuapp.com/loginStatus").then((res)=>{
+        console.log(res.data);
         if(!res.data){
             history.push("/martauth");
         }
     })
-    axios.get("/accountCreds").then((res)=>{
+    axios.get("https://pacific-coast-95024.herokuapp.com/accountCreds").then((res)=>{
+        console.log(res.data);
         setCredentials(res.data);
     })
     function Logout(){
-        axios.post("/loginStatusUpdate",{
+        axios.post("https://pacific-coast-95024.herokuapp.com/loginStatusUpdate",{
             status:false
         });
         history.push("/");

@@ -34,6 +34,7 @@ function Martauth(){
         axios.post("https://pacific-coast-95024.herokuapp.com/login",{
             email:response.profileObj.email,
         }).then(res=>{
+            console.log(res.data);
             if(res.data!=="fail"){
                 setPassword(res.data);
                 setLoginStatus(true);

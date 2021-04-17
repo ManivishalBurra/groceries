@@ -9,7 +9,7 @@ import 'rc-footer/assets/index.css'; // import 'rc-footer/asssets/index.less';
 import axios from 'axios';
 function Mart(){
     const history = useHistory();
-    axios.get("/loginStatus").then((res)=>{
+    axios.get("https://pacific-coast-95024.herokuapp.com/loginStatus").then((res)=>{
         if(!res.data){
             history.push("/martauth");
         }

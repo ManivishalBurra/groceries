@@ -7,7 +7,7 @@ function Shopping(props){
 
     const [shopList,setshopList]=useState([]);
     useEffect(()=>{
-        axios.get('/cartData').then((res)=>{
+        axios.get('https://pacific-coast-95024.herokuapp.com/cartData').then((res)=>{
             setshopList(res.data);
         });
     })

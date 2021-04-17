@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function Martauth(){
     useEffect(()=>{
-        axios.get("/loginStatus").then((res)=>{
+        axios.get("https://pacific-coast-95024.herokuapp.com/loginStatus").then((res)=>{
             if(res.data){
                 history.push("/mart");
             }
