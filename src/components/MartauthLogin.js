@@ -1,10 +1,13 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useContext} from 'react';
 import GoogleLogin from "react-google-login";
 import {useHistory} from "react-router-dom";
 import axios from 'axios';
-
+import {UserContext} from './userStatus';
+import {UserEmail} from './userEmail';
 function Martauth(){
-    const [loginStatus,setLoginStatus] = React.useState(false);
+    const {loginStatus,setLoginStatus} = useContext(UserContext);
+    const {userEmail,setUserEmail} = useContext(UserEmail);
+    // const [loginStatus,setLoginStatus] = React.useState(false);
     const [image,setImage]=React.useState("");
     const [username,setName] = React.useState("");
     const [password,setPassword]= React.useState("");
@@ -18,28 +21,28 @@ function Martauth(){
     function handleClick(){
         if(password.toString()===typePassword.toString())
         {
-            axios.post("https://pacific-coast-95024.herokuapp.com/loginStatusUpdate",{
-                status:true,
-            });
+            setLoginStatus(true);
             history.push("/mart");
+            
         }
         else{
             alert("verification OTP compromised!! please try again");
             setLoginStatus(false);
+            setUserEmail("");
         }
     }
 
 
     const responseSuccessGoogle=(response)=>{        
-        axios.post("https://pacific-coast-95024.herokuapp.com/login",{
+        axios.post("http://localhost:9000/login",{
             email:response.profileObj.email,
         }).then(res=>{
-            console.log(res.data);
             if(res.data!=="fail"){
                 setPassword(res.data);
                 setLoginStatus(true);
                 setImage(response.profileObj.imageUrl);
                 setName(response.profileObj.name);
+                setUserEmail(response.profileObj.email);
             }
             else{
                 alert("user never exist!");

@@ -298,7 +298,7 @@ p{
 /* shopping */
 .shopping-main{
     margin: 100px 0;
-
+    height: 100vh;
 }
 #contain{
     margin:100px;
@@ -326,9 +326,10 @@ p{
 }
 
 .shopping-page{
-    padding: 50px 0;
+    padding: 1px 0;
     background-color: rgb(101, 164, 103);
 }
+
 #shopping-thumbnail{
     position: relative;
 }
@@ -428,6 +429,66 @@ p{
 }
 .filter i{
     color: white;
+}
+.retailer-add{
+    right: 86px;
+    background: #dfdfdf;
+    font-size: 27px;
+}
+.form-main{
+    position: fixed;
+    z-index: 10002;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+.close-form{
+    position: absolute;
+    top: 15%;
+    right: 35%;
+}
+.close-form button{
+    border:none;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+.form-main input{
+    height: 50px;
+    width: 30vw;
+    margin: 10px;
+    border: none;
+    border-radius: 48px;
+    background: #c9d2c9;
+    padding: 0 20px;
+}
+.innermart-main{
+    padding-top: 120px;
+}
+.DepthSearch-main{
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 3px 46px -20px;
+    margin-bottom: 50px;
+}
+.DepthSearch-image img{
+    width: 100%;
+    border-radius: 8px;
+}
+.innermart-main p,.innermart-main h6{
+    color: black;
+}
+.depth-matter{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.depth-button button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    margin: 10px 0;
 }
 ::-webkit-scrollbar {
     width: 1.5px;

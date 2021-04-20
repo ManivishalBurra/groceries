@@ -1,34 +1,33 @@
-import React from 'react';
-import Buttons from './Buttons'
+import axios from 'axios';
+import React, { useContext } from 'react';
+import Buttons from './Buttons';
+import {UserCallBack,Cartdata} from './userStatus';
+import {useHistory} from "react-router-dom";
 function Shoppingitems(props){
-    
-    function click(){
-        var x=document.querySelectorAll(".bill-main");
-        x[0].style.display="flex";
-        addCart();  
-      }
-    function addCart(){
-      var x=document.querySelectorAll(".popup a button");
-      x[0].style.visibility="visible"; 
-      setTimeout(function(){
-        x[0].style.visibility="hidden"; 
-      }, 200);
-      props.addtocart(props);
+    const history = useHistory();
+    const {callback,setCallback} = useContext(UserCallBack);
+      
+    function HandleClick(e){
+      axios.post("/queryByOrder",{
+        order:props.order
+      }).then(res=>{
+        setCallback(res.data);
+        history.push("/innermart")
+      })
     }
     return (
             <div className="col-lg-3 col-sm-6 col-md-6">
             <div className="center column item-card" id={props.classes} >
-            <div className="items center">
+            <div className="items center" onClick={HandleClick}>
                 <img src={props.image} alt="shoppingitems.jpg"/>
                 <Buttons classname="order order-abs center stat-order shopbutton" buy={props.order} /> 
             </div>
-            
             <div className="center Boi">
             <div className="Buy2 Buy order center Coi addcart">
-            <a href={props.pathref}><button name={props.image} value={props.order} onClick={addCart }>{props.buy}</button></a>
+            <button onClick={HandleClick} name={props.image} value={props.order} >{props.buy}</button>
             </div>
             <div className="Buy order center Coi buynow">
-            <a href={props.pathref}><button name={props.image} value={props.order} onClick={click} >Buy now</button></a>
+            <button onClick={HandleClick} name={props.image} value={props.order} >Buy now</button>
             </div>
             </div>
             </div>

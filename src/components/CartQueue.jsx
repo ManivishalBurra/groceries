@@ -1,11 +1,15 @@
-import React from 'react';
-
+import React,{useContext} from 'react';
+import {Cartdata} from './userStatus';
 
 function CartQueue(props){
     
-    function deletion(){
-        props.onDelete(props.id);
+    const {data,setData}=useContext(Cartdata);
+    function HandleDelete(){
+        setData(data.filter(function(obj){
+         return obj.id!== props.id;    
+        }));
     }
+    
     return (
        <div className={"queue"+props.id+" center queue-list"}>
         <div className="queue-item center">
@@ -18,7 +22,7 @@ function CartQueue(props){
             </div>
             <div className="center column">
                 <p>{props.itemname}</p>
-                <p>10pcs</p>
+                <p>{props.quantity}pcs</p>
             </div>
         </div>
 
@@ -30,7 +34,7 @@ function CartQueue(props){
         
         <div className="queue-item center">
             <div>
-                <button name={props.id} onClick={deletion}>Delete</button>
+                <button name={props.id} onClick={HandleDelete} >Delete</button>
             </div>
         </div>
 

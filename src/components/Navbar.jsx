@@ -1,24 +1,28 @@
 import axios from 'axios';
-import React from 'react';
-
-
+import React,{useContext, useEffect} from 'react';
+import { Link } from "react-router-dom";
+import {UserContext} from './userStatus';
+import {UserEmail} from './userEmail';
 function Navbar(){
-  const [loginStatus,setLoginStatus]=React.useState(false);
+  // const [loginStatus,setLoginStatus]=React.useState(false);
   const [credentials,setCredentials]=React.useState("");
-  axios.get("https://pacific-coast-95024.herokuapp.com/loginStatus").then((res)=>{
-    setLoginStatus(res.data);
-  });
-  
-  axios.get("https://pacific-coast-95024.herokuapp.com/accountCreds").then((res)=>{
-    setCredentials(res.data);
-  })
+  var {loginStatus,setLoginStatus} = useContext(UserContext);
+  const {userEmail,setUserEmail} = useContext(UserEmail);
+
+useEffect(()=>{
+  axios.post("http://localhost:9000/getcreds",{
+    email:userEmail,
+}).then(res=>{
+  setCredentials(res.data);
+})
+},loginStatus);
+
     return(
       
       <nav className="navbar navbar-expand-lg navbar-light fixed-top backdrop-blur">
   <div className="container-fluid">
-    <a className="navbar-brand" href="/"><img src="images/fresh.png" alt="" width="auto" height="40" />
-    &nbsp; Groceries.me 
-    </a>
+  <Link className="navbar-brand" to="/"><img src="images/fresh.png" alt="" width="auto" height="40" />
+    &nbsp; Groceries.me </Link>
     {loginStatus &&
     <div className="c-search">
     <input size="60" placeholder="search for products..." />
@@ -33,21 +37,21 @@ function Navbar(){
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Home</a>
+          <Link className="nav-link" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/martauth">Gmart</a>
+          <Link className="nav-link" to="/martauth">Gmart</Link>
         </li>
         {
         loginStatus &&  
         <li className="nav-item center">
-          <a className="nav-link center" href="/account">Account&nbsp;<img src={credentials.image} width="auto" style={{borderRadius:"100%",height:"25px"}} /> </a>
+          <Link className="nav-link center" to="/account">Account&nbsp;<img src={credentials.image} width="auto" style={{borderRadius:"100%",height:"25px"}} /> </Link>
         </li>
         }
         {
         !loginStatus &&  
         <li className="nav-item">
-          <a className="nav-link" href="/martauth">Login</a>
+          <Link className="nav-link" to="/martauth">Login</Link>
         </li>
         }
       </ul>

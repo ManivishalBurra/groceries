@@ -1,21 +1,13 @@
 import React from 'react';
 import Buttons from './Buttons';
-
-
+import {useHistory} from "react-router-dom";
 function Items(props){
-
+    const history = useHistory();
     function click(){
-        var x=document.querySelectorAll(".bill-main");
-        x[0].style.display="flex";
-        addCart();  
+        history.push("/mart");
       }
     function addCart(){
-      var x=document.querySelectorAll(".popup a button");
-      x[0].style.visibility="visible"; 
-      setTimeout(function(){
-        x[0].style.visibility="hidden"; 
-      }, 200);
-      props.addtocart(props);
+      history.push("/mart");
     }
     return (
 

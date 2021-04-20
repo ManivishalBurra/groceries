@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import CartQueue from './CartQueue';
+import {Cartdata} from './userStatus';
 import Bill from './Totalbill'
 
 function Cart(props){
-
+    const {data,setData}=useContext(Cartdata);
     function cartLists(cart){
         return <CartQueue
         key={cart.id}
@@ -15,6 +16,7 @@ function Cart(props){
         onDelete={props.deletion}
         />
     }
+    console.log(data);
 
     return (
      <div className={props.classname}>
@@ -28,9 +30,10 @@ function Cart(props){
             <hr/>
         </header>
         <div className={props.subclass}>
-        {props.data.map(cartLists)}
-        {props.classname==="center bill-main backdrop-blur" && <Bill billdata={props.data} />}
+        {data.map(cartLists)}
+        {props.classname==="center bill-main backdrop-blur" && <Bill billdata={data} />}
         </div>
+        
         </div>
     );
 }

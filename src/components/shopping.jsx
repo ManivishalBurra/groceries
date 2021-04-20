@@ -6,15 +6,17 @@ import axios from 'axios';
 function Shopping(props){
 
     const [shopList,setshopList]=useState([]);
+
     useEffect(()=>{
-        axios.get('https://pacific-coast-95024.herokuapp.com/cartData').then((res)=>{
+        axios.get('/martListData').then((res)=>{
             setshopList(res.data);
+            console.log(shopList);
         });
-    })
+    },[]);
 
     function shoplists(list){
         return <ShoppingItems
-            key={list.id} 
+            key={list._id} 
             image={list.image} 
             order={list.order} 
             buy={list.buy} 
@@ -22,17 +24,19 @@ function Shopping(props){
             quantity={list.quantity}
             access={list.access}
             classes="shopping-thumbnail"
-            addtocart={props.addToCart}
-            data={props.data}
+            
+            
         />
     }
     
     
 
     return(
-        <div className="center shopping-main" id="contain">
+        <div className=" shopping-main" id="contain">
             <div className="row" id="contain-shop">
-            {shopList.map(shoplists)}
+            {shopList.length>0 &&
+            shopList.map(shoplists)
+            }
             </div>
         </div>
     );

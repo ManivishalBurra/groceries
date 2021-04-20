@@ -1,22 +1,24 @@
-import React,{useEffect} from 'react';
+import React,{useContext, useEffect} from 'react';
 import GoogleLogin from "react-google-login";
 import {useHistory} from "react-router-dom";
 import axios from 'axios';
-
+import {UserContext} from './userStatus';
 function Martauth(){
+    const {loginStatus,setLoginStatus} = useContext(UserContext);
     useEffect(()=>{
-        axios.get("https://pacific-coast-95024.herokuapp.com/loginStatus").then((res)=>{
-            if(res.data){
-                history.push("/mart");
-            }
-        })
+    
+        if(loginStatus){
+            history.push("/mart");
+        }
+    
     })
+    
     const history = useHistory();
     function MyFunction(){
         history.push("/martauthLogin")
     }
     const responseSuccessGoogle=(response)=>{        
-        axios.post("https://pacific-coast-95024.herokuapp.com/googlelogin",{
+        axios.post("http://localhost:9000/googlelogin",{
             name:response.profileObj.name,
             image:response.profileObj.imageUrl,
             email:response.profileObj.email,
