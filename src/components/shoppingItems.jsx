@@ -8,7 +8,7 @@ function Shoppingitems(props){
     const {callback,setCallback} = useContext(UserCallBack);
       
     function HandleClick(e){
-      axios.post("/queryByOrder",{
+      axios.post("https://pacific-coast-95024.herokuapp.com/queryByOrder",{
         order:props.order
       }).then(res=>{
         setCallback(res.data);

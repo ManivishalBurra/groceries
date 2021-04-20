@@ -40,7 +40,7 @@ function Depth(props){
         }
         if(e.target.innerHTML==="Delete"){
             console.log("entered");
-            axios.post("http://localhost:9000/deleteItems",{
+            axios.post("https://pacific-coast-95024.herokuapp.com/deleteItems",{
                 id:props.id,email:userEmail
             }).then(res=>{
                 

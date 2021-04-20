@@ -19,7 +19,7 @@ function Account(){
         history.push("/martauth");
     }
 useEffect(()=>{
-    axios.post("http://localhost:9000/getcreds",{
+    axios.post("https://pacific-coast-95024.herokuapp.com/getcreds",{
         email:userEmail,
     }).then(res=>{
       setCredentials(res.data);
@@ -54,7 +54,7 @@ useEffect(()=>{
     
 
     function HandleClick(event){
-        axios.post("http://localhost:9000/updateUser",{
+        axios.post("https://pacific-coast-95024.herokuapp.com/updateUser",{
             user:event.target.innerHTML,
             email:userEmail
         }).then(res=>{

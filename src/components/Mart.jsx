@@ -26,7 +26,7 @@ function Mart(){
 
     const {loginStatus,SetLoginStatus} = useContext(UserContext);
 useEffect(()=>{
-    axios.post("http://localhost:9000/getcreds",{
+    axios.post("https://pacific-coast-95024.herokuapp.com/getcreds",{
         email:userEmail,
     }).then((res)=>{
         setCredentials(res.data);
@@ -44,7 +44,7 @@ useEffect(()=>{
     }
     function HandleSubmit(e){
 
-        axios.post("http://localhost:9000/cartData",{
+        axios.post("https://pacific-coast-95024.herokuapp.com/cartData",{
             ...value,email:userEmail
         }).then(res=>{
             if(res.data){

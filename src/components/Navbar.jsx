@@ -10,7 +10,7 @@ function Navbar(){
   const {userEmail,setUserEmail} = useContext(UserEmail);
 
 useEffect(()=>{
-  axios.post("http://localhost:9000/getcreds",{
+  axios.post("https://pacific-coast-95024.herokuapp.com/getcreds",{
     email:userEmail,
 }).then(res=>{
   setCredentials(res.data);
